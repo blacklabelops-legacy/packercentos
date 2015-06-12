@@ -1,7 +1,4 @@
 {	
-	"push": {
-      "name": "blacklabelops/centos"
-    },
     "builders": [
       {
         "name":                    "vagrant-centos-7-1503-01-minimal",
@@ -41,16 +38,6 @@
       [{
         "type":                    "vagrant",
         "output":                  "vagrant-centos-7-1503-01-minimal.box"
-      },
-      {
-        "type": "atlas",
-        "artifact": "blacklabelops/centos",
-        "artifact_type": "vagrant.box",
-        "metadata": {
-            "provider": "virtualbox",
-            "version": "1.0.1pre",
-            "created_at": "{{timestamp}}"
-      	}
       }]
    ]
 }
