@@ -14,14 +14,14 @@ This project contains code under Apache License 2.0 from the repository:
 
 * [chef/bento](https://github.com/chef/bento)
 
-# Build
+## Build
 
 Requires
 
 * Packer v0.7.5 or later
 * Vagrant 1.7.2 or later
 
-## Build the Box
+Build the Box
 
 ~~~~
 $ packer build centos7.1-packer.json
