@@ -11,7 +11,8 @@ Features:
 * Available as public vagrant box on Atlas: blacklabelops/centos
 
 This project contains code under Apache License 2.0 from the repository:
-[chef/bento](https://github.com/chef/bento)
+
+* [chef/bento](https://github.com/chef/bento)
 
 # Build
 
