@@ -2,13 +2,13 @@
 
 Packer project for building a CentOS Vagrant Virtualbox.
 
-Builds the blacklabelops/centos image on Atlas. This is a Vagrant box, never use it for production!
+Builds the [blacklabelops/centos](https://atlas.hashicorp.com/blacklabelops/boxes/centos) Image on Atlas. This is a Vagrant box, never use it for production!
 
 Features:
 
 * Tested On: Packer 0.7.5, Vagrant 1.7.2, Virtualbox 4.3.28
 * Includes: CentOS 7.1 minimal
-* Available as public vagrant box on Atlas: blacklabelops/centos
+* Available as public vagrant box on Atlas: [blacklabelops/centos](https://atlas.hashicorp.com/blacklabelops/boxes/centos)
 
 This project contains code under Apache License 2.0 from the repository:
 
