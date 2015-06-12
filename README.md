@@ -1,4 +1,4 @@
-# PackerCentOS
+# BlackLabelOps/PackerCentOS
 
 Packer project for building a CentOS Vagrant Virtualbox.
 
