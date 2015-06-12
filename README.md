@@ -1,5 +1,7 @@
 # BlackLabelOps/PackerCentOS
 
+[![Circle CI](https://circleci.com/gh/blacklabelops/packercentos.svg?style=svg)](https://circleci.com/gh/blacklabelops/packercentos)
+
 Packer project for building a CentOS Vagrant Virtualbox.
 
 Builds the [blacklabelops/centos](https://atlas.hashicorp.com/blacklabelops/boxes/centos) Image on Atlas. This is a Vagrant box, never use it for production!
