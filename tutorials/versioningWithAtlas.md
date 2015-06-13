@@ -1,6 +1,6 @@
 # Version and Release Vagrant Boxes With Atlas
 
-Atlas is great for parking boxes on the internet and spreading or deployment them in environments. The Atlas API gives access to all functionality in its REST API and it allows to implement a custom release cycle. Vagrant defines the boxes and boxes can be anything from Virtualbox to Amazon EC2 images. 
+Atlas is great for parking boxes on the internet and spreading or deployment them in environments. The Atlas API gives access to all functionality in its REST API and it allows to implement a custom release cycle. Vagrant defines the term boxes and boxes can be anything from Virtualbox to Amazon EC2 images. 
 
 ## What I Want
 
