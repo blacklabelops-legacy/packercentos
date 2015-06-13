@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o errexit    # abort script at first error
+
 # Setting environment variables
 readonly CUR_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 
@@ -34,7 +36,7 @@ if [ version == 0 ]; then
   exit 1
 fi
 
-response=$(curl -s https://atlas.hashicorp.com/api/v1/box/${ATLAS_BOX}/version/${version}/providers -X POST -d provider[name]=${ATLAS_PROVIDER} -d access_token=${ATLAS_TOKEN})
+response=$(curl -s https://atlas.hashicorp.com/api/v1/box/${ATLAS_BOX}/versions -X POST -d version[version]=${version} -d access_token=${ATLAS_TOKEN})
 
 checkErr $response
 

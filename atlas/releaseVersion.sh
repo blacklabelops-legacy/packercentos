@@ -29,7 +29,14 @@ err() {
 # SCRIPT ENTRYPOINT
 #------------------
 
-response=$(curl https://atlas.hashicorp.com/api/v1/box/${ATLAS_BOX}/version/${ATLAS_VERSION}/release  -X PUT -d access_token=${ATLAS_TOKEN})
+version=$1
+
+if [ version == 0 ]; then
+  version=${ATLAS_VERSION}
+  exit 1
+fi
+
+response=$(curl -s https://atlas.hashicorp.com/api/v1/box/${ATLAS_BOX}/version/${version}/release  -X PUT -d access_token=${ATLAS_TOKEN})
 
 checkErr $response
 
