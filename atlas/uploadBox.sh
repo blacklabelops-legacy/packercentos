@@ -54,6 +54,4 @@ echo ${RESPONSE}
 
 TOKEN=$(jsonval ${RESPONSE}, "token")
 
-RESPONSE=$(curl -X PUT --upload-file ${BOX_FILE} https://binstore.hashicorp.com/${TOKEN})
-
-checkErr ${RESPONSE}
+curl -X PUT --upload-file ${BOX_FILE} https://binstore.hashicorp.com/${TOKEN}
