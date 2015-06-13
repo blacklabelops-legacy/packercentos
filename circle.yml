@@ -6,7 +6,7 @@ dependencies:
   cache_directories:
     - "~/bin"
   pre:
-    - ./circle/installPacker.sh
+    - circle/installPacker.sh
     
 test:
   override:
