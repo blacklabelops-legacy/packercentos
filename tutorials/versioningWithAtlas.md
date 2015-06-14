@@ -141,6 +141,12 @@ Create provider.
 $ ./atlas/createProvider.sh
 ~~~~ 
 
+Fill the provider. It seems Atlas does not delete a provider when empty.
+
+~~~~
+$ ./atlas/uploadBox.sh vagrant-centos-7-1503-01-minimal.box
+~~~~ 
+
 ### Daily Build Upload
 
 Atlas does not allow to simply overwrite boxes. In order to realize a daily upload you have to delete the provider and create a new one.
