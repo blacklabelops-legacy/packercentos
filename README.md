@@ -49,6 +49,10 @@ Convenience script when the test fails. The script deletes all test artifacts.
 $ ./cleanTest.sh
 ~~~~
 
+## Atlas
+
+This project includes scripts for uploading and managing the box on [Atlas](https://atlas.hashicorp.com/). The scripts are described in this [Tutorial](/tutorials/versioningWithAtlas.md).
+
 ## References
 
 * [Vagrant Homepage](https://www.vagrantup.com/)
