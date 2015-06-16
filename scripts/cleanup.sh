@@ -2,7 +2,6 @@
 
 # These were only needed for building VMware/Virtualbox extensions:
 yum -y remove gcc cpp kernel-devel kernel-headers perl
-yum -y update
 yum -y clean all
 rm -rf VBoxGuestAdditions_*.iso VBoxGuestAdditions_*.iso.?
 rm -f /tmp/chef*rpm
