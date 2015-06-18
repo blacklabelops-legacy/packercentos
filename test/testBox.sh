@@ -10,6 +10,7 @@ mkdir testbox
 cd testbox
 vagrant init testboxcentos
 vagrant up
+vagrant ssh -c 'echo Hello Testbox!'
 cd ..
 
 # Reading config
