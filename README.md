@@ -10,8 +10,8 @@ Features:
 
 * Tested On: Packer 0.7.5, Vagrant 1.7.2, Virtualbox 4.3.28
 * Includes: CentOS 7.1 minimal
-* Available as public vagrant box on Atlas: [blacklabelops/centos](https://atlas.hashicorp.com/blacklabelops/boxes/centos)
-* Atlas virtualbox provider is build daily.
+* Available as public Vagrant box on Atlas: [blacklabelops/centos](https://atlas.hashicorp.com/blacklabelops/boxes/centos)
+* Atlas Virtualbox provider is build daily.
 * Circle-CI: CI verification of the packer file.
 
 This project contains code under Apache License 2.0 from the repository:
@@ -57,17 +57,17 @@ This project includes scripts for uploading and managing the box on [Atlas](http
 
 ### Installing Updates
 
-The build includes the command 'yum update' in order to contain the latest packages. Some people do not want this behavior because the package versions will be dependent on the moment you build the image. In this case remove the script 'updateAll.sh' and 'reboot.sh' from the build file.
+The build does not include the command 'yum update' because the package versions will be dependent on the moment you build the image. We only update the kernel in order to keep Virtualbox Guest Additions working.
 
-### Reboot for CentOS
+### Reboot for Latest CentOS Kernel
 
-Packer file contains a reboot sequence for CentOS 7. The latest CentOS ISO does not always contain the latest kernel and after updating the kernel the image needs a reboot. 
+Packer file contains a kernel update and reboot sequence for CentOS. The latest CentOS ISO does not always contain the latest kernel and after updating the kernel the vm needs a reboot. 
 
 Otherwise after running 'yum update' the Virtualbox Guest Additions will stop working and vagrant will timeout when mounting external directories.
 
 Always include the following scripts in sequence in order to make 'yum update' work:
 
-1. scripts/updateAll.sh
+1. scripts/updateKernel.sh
 2. scripts/reboot.sh
 
 ## References
