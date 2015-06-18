@@ -57,13 +57,15 @@ This project includes scripts for uploading and managing the box on [Atlas](http
 
 ### Installing Updates
 
-The build includes the command 'yum update' in order to contain the latest packages. Some people does not want this behavior because the package versions will be dependent on the moment you build the image. In this case remove the script 'updateAll.sh' and 'reboot.sh' from the build file.
+The build includes the command 'yum update' in order to contain the latest packages. Some people do not want this behavior because the package versions will be dependent on the moment you build the image. In this case remove the script 'updateAll.sh' and 'reboot.sh' from the build file.
 
 ### Reboot for CentOS
 
-This packer build contains a reboot loop for CentOS 7. The latest CentOS ISO does not always contain the latest kernel and updating the kernel als means that the image needs a reboot. Otherwise after running 'yum update' the Virtualbox Guest Additions will stop working and vagrant will timeout when mounting external directories.
+Packer file contains a reboot sequence for CentOS 7. The latest CentOS ISO does not always contain the latest kernel and after updating the kernel the image needs a reboot. 
 
-Always include the following scripts in sequence in order to make 'yum update' work in this image:
+Otherwise after running 'yum update' the Virtualbox Guest Additions will stop working and vagrant will timeout when mounting external directories.
+
+Always include the following scripts in sequence in order to make 'yum update' work:
 
 1. scripts/updateAll.sh
 2. scripts/reboot.sh
