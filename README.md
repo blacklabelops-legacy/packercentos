@@ -38,7 +38,7 @@ $ packer build centos7.1-packer.json
 Adds and spins up the box with Vagrant.
 
 ~~~~
-$ ./testBox.sh
+$ ./test/testBox.sh
 ~~~~
 
 ### Cleaning failed Tests
@@ -46,7 +46,7 @@ $ ./testBox.sh
 Convenience script when the test fails. The script deletes all test artifacts.
 
 ~~~~
-$ ./cleanTest.sh
+$ ./test/cleanTest.sh
 ~~~~
 
 ## Atlas
