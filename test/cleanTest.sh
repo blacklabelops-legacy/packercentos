@@ -2,7 +2,7 @@
 
 if [ -d testbox ]
 then
-    echo "Deleting vagrant project."
+    echo "Deleting vagrant test directory."
     # Destroy possible running instance
     cd testbox
     vagrant destroy -f
@@ -12,4 +12,8 @@ then
 fi
 
 # Remove possible existent box
-vagrant box remove -f testboxcentos
+existent_box=$(vagrant box list | grep testbox)
+if [ ! -z "$existent_box" ]; then
+  echo "Removing test box."
+  vagrant box remove -f testboxcentos
+fi
