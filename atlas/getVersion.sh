@@ -35,7 +35,7 @@ if [ -z "$1" ]; then
   version=${ATLAS_VERSION}
 fi
 
-response=$(curl -s https://atlas.hashicorp.com/api/v1/box/${ATLAS_BOX}/versions -X POST -d version[version]=${version} -d access_token=${ATLAS_TOKEN})
+response=$(curl https://atlas.hashicorp.com/api/v1/box/${ATLAS_BOX}/version/${version}?access_token=${ATLAS_TOKEN})
 
 checkErr $response
 
