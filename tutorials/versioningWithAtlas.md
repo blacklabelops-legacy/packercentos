@@ -143,14 +143,7 @@ $ ./atlas/createProvider.sh
 
 ### Daily Build Upload
 
-Atlas does not allow to simply overwrite boxes. In order to realize a daily upload you have to delete the provider and create a new one.
-
-Delete and recreate the provider.
-
-~~~~
-$ ./atlas/deleteProvider.sh
-$ ./atlas/createProvider.sh
-~~~~ 
+Simply overwritte the last uploaded box.
 
 Upload the daily build artifact.
 

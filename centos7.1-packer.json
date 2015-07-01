@@ -25,6 +25,10 @@
    {
      "execute_command": "echo 'vagrant' | sudo -S -E bash '{{.Path}}'",
      "scripts": [
+       "scripts/updateKernel.sh",
+       "scripts/reboot.sh",
+       "scripts/cleanKernels.sh",
+       "scripts/reboot.sh",
        "scripts/sshd.sh",
        "scripts/vagrant.sh",
        "scripts/virtualbox.sh",
