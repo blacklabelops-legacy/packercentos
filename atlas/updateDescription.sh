@@ -13,7 +13,7 @@ function checkErr {
 	if  [[ $1 == '{"errors":'* ]] ;
 	then
 		echo $1
-    	err
+    err
 	fi
 }
 
@@ -29,13 +29,31 @@ err() {
 # SCRIPT ENTRYPOINT
 #------------------
 
-version=$1
+description_file=$1
+version=$2
 
 if [ -z "$1" ]; then
+	echo 'Description file parameter missing!'
+  exit 1
+fi
+
+if [ ! -f $description_file ]; then
+  echo "Markdown file '$description_file' not found!"
+  exit 1
+fi
+
+if [ -z "$2" ]; then
   version=${ATLAS_VERSION}
 fi
 
-response=$(curl -s https://atlas.hashicorp.com/api/v1/box/${ATLAS_BOX}/versions -X POST -d version[version]=${version} -d access_token=${ATLAS_TOKEN})
+description=$(cat $1)
+
+description=${description//!ATLAS_VERSION!/$version}
+
+response=$(curl https://atlas.hashicorp.com/api/v1/box/${ATLAS_BOX}/version/${version} \
+        -X PUT \
+				--data-urlencode "version[description]=${description}" \
+        -d access_token=${ATLAS_TOKEN})
 
 checkErr $response
 
