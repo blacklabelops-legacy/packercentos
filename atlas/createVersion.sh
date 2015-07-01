@@ -31,8 +31,9 @@ err() {
 
 version=$1
 
-if [ -z "$1" ]; then
+if [ version == 0 ]; then
   version=${ATLAS_VERSION}
+  exit 1
 fi
 
 response=$(curl -s https://atlas.hashicorp.com/api/v1/box/${ATLAS_BOX}/versions -X POST -d version[version]=${version} -d access_token=${ATLAS_TOKEN})
