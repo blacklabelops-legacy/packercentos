@@ -12,7 +12,7 @@
         "iso_checksum_type":       "sha256",
         "ssh_username":            "vagrant",
         "ssh_password":            "vagrant",
-        "ssh_wait_timeout":        "10000s",
+        "ssh_wait_timeout":        "3600s",
         "http_directory":          ".",
         "boot_wait":               "10s",
         "boot_command": [          "<up><tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos7.1.cfg<enter>"],
