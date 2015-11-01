@@ -31,6 +31,7 @@
        "scripts/reboot.sh",
        "scripts/sshd.sh",
        "scripts/vagrant.sh",
+       "scripts/packages.sh",
        "scripts/virtualbox.sh",
        "scripts/cleanup.sh",
        "scripts/minimize.sh"
