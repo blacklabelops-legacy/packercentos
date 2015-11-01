@@ -42,7 +42,7 @@
       [{
         "type":                    "vagrant",
         "compression_level":       9,
-        "output":                  "vagrant-centos-7-1503-01-minimal.box"
+        "output":                  "vagrant-centos-7-firewall.box"
       }]
    ]
 }

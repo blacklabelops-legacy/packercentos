@@ -2,7 +2,7 @@
 
 ## PRE VERSION DAILY BUILD!
 
-Github [blacklabelops/packercentos](https://github.com/blacklabelops/packercentos/centos7firewall)
+Github [blacklabelops/packercentos](https://github.com/blacklabelops/packercentos/centosfirewall)
 
 This is a Vagrant Box, never use it in Production!
 
@@ -15,4 +15,4 @@ $ vagrant up
 
 ## Source Project
 
-Github [BlackLabelOps/PackerCentOS](https://github.com/blacklabelops/packercentos/centos7firewall)
+Github [BlackLabelOps/PackerCentOS](https://github.com/blacklabelops/packercentos/centosfirewall)

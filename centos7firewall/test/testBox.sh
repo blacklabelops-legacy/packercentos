@@ -5,7 +5,7 @@ set -o errexit    # abort script at first error
 #Setting environment variables
 readonly CUR_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 
-vagrant box add vagrant-centos-7-1503-01-minimal.box --name testboxcentos
+vagrant box add vagrant-centos-7-firewall.box --name testboxcentos
 mkdir testbox
 cd testbox
 vagrant init testboxcentos
