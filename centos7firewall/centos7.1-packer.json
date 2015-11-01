@@ -1,0 +1,48 @@
+{
+    "builders": [
+      {
+        "name":                    "vagrant-centos-7-1503-01-minimal",
+        "type":                    "virtualbox-iso",
+        "guest_additions_path":    "VBoxGuestAdditions_{{.Version}}.iso",
+        "virtualbox_version_file": ".vbox_version",
+        "headless": 			         true,
+        "guest_os_type":           "RedHat_64",
+        "iso_url":                 "http://mirror2.hs-esslingen.de/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso",
+        "iso_checksum":            "7cf1ac8da13f54d6be41e3ccf228dc5bb35792f515642755ff4780d5714d4278",
+        "iso_checksum_type":       "sha256",
+        "ssh_username":            "vagrant",
+        "ssh_password":            "vagrant",
+        "ssh_wait_timeout":        "3600s",
+        "http_directory":          ".",
+        "boot_wait":               "10s",
+        "boot_command": [          "<up><tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos_firewall.7.1.cfg<enter>"],
+        "shutdown_command": 	   "echo 'vagrant'|sudo -S /sbin/halt -h -p",
+        "disk_size":               40960,
+        "vboxmanage":              [["modifyvm", "{{.Name}}", "--memory", "1024"],["modifyvm", "{{.Name}}", "--cpus", "2"]]
+      }
+    ],
+    "provisioners": [
+   {
+     "execute_command": "echo 'vagrant' | sudo -S -E bash '{{.Path}}'",
+     "scripts": [
+       "scripts/updateKernel.sh",
+       "scripts/reboot.sh",
+       "scripts/cleanKernels.sh",
+       "scripts/reboot.sh",
+       "scripts/sshd.sh",
+       "scripts/vagrant.sh",
+       "scripts/virtualbox.sh",
+       "scripts/cleanup.sh",
+       "scripts/minimize.sh"
+     ],
+     "type": "shell"
+   }
+   ],
+    "post-processors": [
+      [{
+        "type":                    "vagrant",
+        "compression_level":       9,
+        "output":                  "vagrant-centos-7-1503-01-minimal.box"
+      }]
+   ]
+}
