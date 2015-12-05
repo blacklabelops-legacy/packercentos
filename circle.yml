@@ -11,6 +11,6 @@ dependencies:
 test:
   override:
     - packer validate centos7.1-packer.json
-    - packer validate centos7/centos.7.1-packer.json
-    - packer validate centos7firewall/centos7.1-packer.json
-    - packer validate centos6/centos6-packer.json
+    - cd ~/centos7 && packer validate centos7/centos7.1-packer.json
+    - cd ~/centos7firewall && packer validate centos7firewall/centos7.1-packer.json
+    - cd ~/centos6 && packer validate centos6/centos6-packer.json
