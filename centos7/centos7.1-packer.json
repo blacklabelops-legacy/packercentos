@@ -1,4 +1,7 @@
 {
+    "variables": {
+        "atlas_token": "{{env `ATLAS_TOKEN`}}"
+    },
     "builders": [
       {
         "name":                    "vagrant-centos-7-1503-01-minimal",
@@ -15,7 +18,7 @@
         "ssh_wait_timeout":        "3600s",
         "http_directory":          ".",
         "boot_wait":               "10s",
-        "boot_command": [          "<up><tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos_firewall.7.1.cfg<enter>"],
+        "boot_command": [          "<up><tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos.7.1.cfg<enter>"],
         "shutdown_command": 	   "echo 'vagrant'|sudo -S /sbin/halt -h -p",
         "disk_size":               40960,
         "vboxmanage":              [["modifyvm", "{{.Name}}", "--memory", "1024"],["modifyvm", "{{.Name}}", "--cpus", "2"]]
@@ -49,7 +52,7 @@
         "type": "atlas",
         "artifact": "blacklabelops/centos7",
         "artifact_type": "vagrant.box",
-        "token": "{{env `ATLAS_TOKEN`}}",
+        "token": "{{user `atlas_token`}}",
         "metadata": {
           "provider": "virtualbox",
           "version": "0.0.1"
