@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yum -y update kernel
+yum -y update
