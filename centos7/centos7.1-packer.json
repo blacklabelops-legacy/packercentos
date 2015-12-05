@@ -55,7 +55,7 @@
         "token": "{{user `atlas_token`}}",
         "metadata": {
           "provider": "virtualbox",
-          "version": "{{isotime "2006.0102.030405"}}",
+          "version": "{{isotime \"2006.0102.030405\"}}",
           "created_at": "{{timestamp}}"
         }
       }
