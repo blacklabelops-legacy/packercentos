@@ -7,7 +7,10 @@ dependencies:
     - "~/bin"
   pre:
     - circle/installPacker.sh
-    
+
 test:
   override:
     - packer validate centos7.1-packer.json
+    - packer validate centos7/centos.7.1-packer.json
+    - packer validate centos7firewall/centos7.1-packer.json
+    - packer validate centos6/centos6-packer.json
