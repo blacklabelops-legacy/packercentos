@@ -35,13 +35,7 @@ if [ -z "$1" ]; then
   version=${ATLAS_VERSION}
 fi
 
-box=$2
-
-if [ -z "$2" ]; then
-  box=${ATLAS_BOX}
-fi
-
-response=$(curl -s https://atlas.hashicorp.com/api/v1/box/${box}/version/${version} -X DELETE -d access_token=${ATLAS_TOKEN})
+response=$(curl https://atlas.hashicorp.com/api/v1/box/${ATLAS_BOX}/version/${version}?access_token=${ATLAS_TOKEN})
 
 checkErr $response
 

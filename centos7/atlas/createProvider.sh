@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -o errexit    # abort script at first error
-
 # Setting environment variables
 readonly CUR_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 
@@ -12,7 +10,7 @@ source $CUR_DIR/atlas.cfg
 function checkErr {
 	if  [[ $1 == '{"errors":'* ]] ;
 	then
-		echo $1
+		echo $response
     	err
 	fi
 }
@@ -35,13 +33,7 @@ if [ -z "$1" ]; then
   version=${ATLAS_VERSION}
 fi
 
-box=$2
-
-if [ -z "$2" ]; then
-  box=${ATLAS_BOX}
-fi
-
-response=$(curl -s https://atlas.hashicorp.com/api/v1/box/${box}/version/${version} -X DELETE -d access_token=${ATLAS_TOKEN})
+response=$(curl -s https://atlas.hashicorp.com/api/v1/box/${ATLAS_BOX}/version/${version}/providers -X POST -d provider[name]=${ATLAS_PROVIDER} -d access_token=${ATLAS_TOKEN})
 
 checkErr $response
 
