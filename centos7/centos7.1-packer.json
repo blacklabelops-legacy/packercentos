@@ -49,6 +49,7 @@
         "type": "atlas",
         "artifact": "blacklabelops/centos7",
         "artifact_type": "vagrant.box",
+        "token": "{{env `ATLAS_TOKEN`}}",
         "metadata": {
           "provider": "virtualbox",
           "version": "0.0.1"
