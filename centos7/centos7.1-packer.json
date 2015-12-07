@@ -56,7 +56,8 @@
         "metadata": {
           "provider": "virtualbox",
           "version": "{{isotime \"2006.0102.030405\"}}",
-          "created_at": "{{timestamp}}"
+          "created_at": "{{timestamp}}",
+          "auto_release": "true"
         }
       },
       {
@@ -67,7 +68,8 @@
         "metadata": {
           "provider": "virtualbox",
           "version": "{{isotime \"2006.0102.030405\"}}",
-          "created_at": "{{timestamp}}"
+          "created_at": "{{timestamp}}",
+          "auto_release": "true"
         }
       },
       {
@@ -78,7 +80,8 @@
         "metadata": {
           "provider": "virtualbox",
           "version": "{{isotime \"2006.0102.030405\"}}",
-          "created_at": "{{timestamp}}"
+          "created_at": "{{timestamp}}",
+          "auto_release": "true"
         }
       },
       {
@@ -89,7 +92,8 @@
         "metadata": {
           "provider": "virtualbox",
           "version": "{{isotime \"2006.0102.030405\"}}",
-          "created_at": "{{timestamp}}"
+          "created_at": "{{timestamp}}",
+          "auto_release": "true"
         }
       },
       {
@@ -100,7 +104,8 @@
         "metadata": {
           "provider": "virtualbox",
           "version": "{{isotime \"2006.0102.030405\"}}",
-          "created_at": "{{timestamp}}"
+          "created_at": "{{timestamp}}",
+          "auto_release": "true"
         }
       }
     ]
