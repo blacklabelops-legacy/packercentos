@@ -6,6 +6,6 @@ rpm -q kernel
 
 yum -y install yum-utils
 
-package-cleanup --oldkernels --count=1
+package-cleanup --oldkernels --count=1 -y
 
 yum -y remove yum-utils
