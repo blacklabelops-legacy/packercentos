@@ -10,11 +10,11 @@ Builds the [blacklabelops/centos](https://atlas.hashicorp.com/blacklabelops/boxe
 
 Features:
 
-* Tested On: Packer 0.7.5, Vagrant 1.7.2, Virtualbox 4.3.28
+* Tested On: Packer 0.8.6, Vagrant 1.7.4, Virtualbox 5.0.x
 * Includes: CentOS 7.1 minimal, latest kernel!
 * Available as public Vagrant box on Atlas: [blacklabelops/centos](https://atlas.hashicorp.com/blacklabelops/boxes/centos)
 * Atlas Virtualbox provider is build daily.
-* Circle-CI: CI verification of the packer file.
+* Circle-CI: CI validation of the packer file.
 
 This project is very grateful for code under Apache License 2.0 from the repository:
 
@@ -64,10 +64,6 @@ $ ./test/cleanTest.sh
 This project includes scripts for uploading and managing the box on [Atlas](https://atlas.hashicorp.com/). The scripts are described in this [Tutorial](/tutorials/versioningWithAtlas.md).
 
 ## Notes
-
-### Installing Updates
-
-The build does not include the command 'yum update' because the package versions would not be stable. We only update the kernel in order to keep Virtualbox Guest Additions working.
 
 ### Reboot for Latest CentOS Kernel
 
