@@ -13,3 +13,8 @@ test:
     - packer validate centos7.1-packer.json
     - cd ~/packercentos/centos7firewall && packer validate centos7.1-packer.json
     - cd ~/packercentos/centos6 && packer validate centos6-packer.json
+
+deployment:
+  build:
+    commands:
+      - packer build centos7.1-packer.json
