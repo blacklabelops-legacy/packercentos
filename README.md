@@ -76,7 +76,11 @@ Always include the following scripts in sequence in order to make 'yum update' w
 1. scripts/updateKernel.sh
 2. scripts/reboot.sh
 
-## References
+# Support
+
+Leave a message and ask questions on Hipchat: [blacklabelops/hipchat](http://support.blacklabelops.com)
+
+# References
 
 * [Vagrant Homepage](https://www.vagrantup.com/)
 * [Packer Homepage](https://www.packer.io/)
