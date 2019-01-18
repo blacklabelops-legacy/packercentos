@@ -1,7 +1,5 @@
 # BlackLabelOps/PackerCentOS
 
-[![Circle CI](https://circleci.com/gh/blacklabelops/packercentos.svg?style=svg)](https://circleci.com/gh/blacklabelops/packercentos)
-
 Packer project for building a CentOS Vagrant Virtualbox.
 
 You always wanted to spin up VM's from latest available ISO images automatically? You want full control of what's installed on your VM? You like CentOS? Then this is the perfect place for you!
@@ -75,10 +73,6 @@ Always include the following scripts in sequence in order to make 'yum update' w
 
 1. scripts/updateKernel.sh
 2. scripts/reboot.sh
-
-# Support
-
-Leave a message and ask questions on Hipchat: [blacklabelops/hipchat](http://support.blacklabelops.com)
 
 # References
 
